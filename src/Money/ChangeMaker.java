@@ -16,7 +16,7 @@ public class ChangeMaker {
 
 		while (price > tender) {
 			System.out.println("$" + tender + " is NOT enough to cover " + "$" + price);
-			System.out.println("Enter amount customer tendered: ");
+			System.out.print("Enter amount customer tendered: ");
 			tender = kb.nextFloat();
 		}
 
@@ -102,10 +102,9 @@ public class ChangeMaker {
 					System.out.println("\nReturn " + nickles + " nickle to customer");
 				}
 				change100 = change100 - (nickles * 5);
-				System.out.println(change100);
 				continue;
 			}
-			if (change100 > 1) {
+			if (change100 >= 1) {
 				int pennies = (change100 - (change100 % 1));
 				if (pennies == 1) {
 					System.out.println("\nReturn " + pennies + " lucky penny to customer");
