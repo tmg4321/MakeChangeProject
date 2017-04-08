@@ -26,15 +26,16 @@ public class ChangeMaker {
 		}
 
 		int change100 = (int) ((tender - price) * 100);
+		System.out.println("\nChange required is " + (tender-price) + ":");
 
 		while (price < tender && (change100 != 0)) {
 
 			if (change100 > 2000) {
 				int twenties = (change100 - (change100 % 2000)) / 2000;
 				if (twenties == 1) {
-					System.out.println("\nReturn " + twenties + " twenty to customer");
+					System.out.println("\n\t" + twenties + " twenty-dollar bill");
 				} else {
-					System.out.println("\nReturn " + twenties + " twenties to customer");
+					System.out.println("\n\t" + twenties + " twenty-dollar bills");
 				}
 				change100 = change100 - (twenties * 2000);
 				continue;
@@ -43,9 +44,9 @@ public class ChangeMaker {
 			if (change100 > 1000) {
 				int tens = (change100 - (change100 % 1000)) / 1000;
 				if (tens == 1) {
-					System.out.println("\nReturn " + tens + " ten to customer");
+					System.out.println("\n\t" + tens + " ten-dollar bill");
 				} else {
-					System.out.println("\nReturn " + tens + " tens to customer");
+					System.out.println("\n\t" + tens + " ten-dollar bills");
 				}
 				change100 = change100 - (tens * 1000);
 				continue;
@@ -55,9 +56,9 @@ public class ChangeMaker {
 			if (change100 > 500) {
 				int fives = (change100 - (change100 % 500)) / 500;
 				if (fives == 1) {
-					System.out.println("\nReturn " + fives + " five to customer");
+					System.out.println("\n\t" + fives + " five-dollar bill");
 				} else {
-					System.out.println("\nReturn " + fives + " fives to customer");
+					System.out.println("\n\t" + fives + " fives-dollar bills");
 				}
 				change100 = change100 - (fives * 500);
 				continue;
@@ -66,9 +67,9 @@ public class ChangeMaker {
 			if (change100 > 100) {
 				int ones = (change100 - (change100 % 100)) / 100;
 				if (ones == 1) {
-					System.out.println("\nReturn " + ones + " one-dollar bill to customer");
+					System.out.println("\n\t" + ones + " one-dollar bill");
 				} else {
-					System.out.println("\nReturn " + ones + " one-dollar bills to customer");
+					System.out.println("\n\t" + ones + " one-dollar bills");
 				}
 				change100 = change100 - (ones * 100);
 				continue;
@@ -76,9 +77,9 @@ public class ChangeMaker {
 			if (change100 > 25) {
 				int quarters = (change100 - (change100 % 25)) / 25;
 				if (quarters == 1) {
-					System.out.println("\nReturn " + quarters + " quarter to customer");
+					System.out.println("\n\t" + quarters + " quarter");
 				} else {
-					System.out.println("\nReturn " + quarters + " quarters to customer");
+					System.out.println("\n\t" + quarters + " quarters");
 				}
 				change100 = change100 - (quarters * 25);
 				continue;
@@ -86,9 +87,9 @@ public class ChangeMaker {
 			if (change100 > 10) {
 				int dimes = (change100 - (change100 % 10)) / 10;
 				if (dimes == 1) {
-					System.out.println("\nReturn " + dimes + " dime to customer");
+					System.out.println("\n\t" + dimes + " dime");
 				} else {
-					System.out.println("\nReturn " + dimes + " dimes to customer");
+					System.out.println("\n\t" + dimes + " dimes");
 				}
 				change100 = change100 - (dimes * 10);
 				continue;
@@ -97,9 +98,9 @@ public class ChangeMaker {
 			if (change100 > 5) {
 				int nickles = (change100 - (change100 % 5)) / 5;
 				if (nickles == 1) {
-					System.out.println("\nReturn " + nickles + " nickle to customer");
+					System.out.println("\n\t" + nickles + " nickle");
 				} else {
-					System.out.println("\nReturn " + nickles + " nickle to customer");
+					System.out.println("\n\t" + nickles + " nickle");
 				}
 				change100 = change100 - (nickles * 5);
 				continue;
@@ -107,9 +108,9 @@ public class ChangeMaker {
 			if (change100 >= 1) {
 				int pennies = (change100 - (change100 % 1));
 				if (pennies == 1) {
-					System.out.println("\nReturn " + pennies + " lucky penny to customer");
+					System.out.println("\n\t" + pennies + " lucky penny");
 				} else {
-					System.out.println("\nReturn " + pennies + " pennies to customer");
+					System.out.println("\n\t" + pennies + " pennies");
 				}
 				change100 = 0;
 				continue;
