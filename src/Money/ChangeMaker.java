@@ -8,10 +8,10 @@ public class ChangeMaker {
 
 		Scanner kb = new Scanner(System.in);
 
-		System.out.print("Enter price of item: ");
+		System.out.print("\nEnter price of item: ");
 		float price = kb.nextFloat();
 
-		System.out.print("Enter amount customer tendered: ");
+		System.out.print("\nEnter amount customer tendered: ");
 		float tender = kb.nextFloat();
 
 		while (price > tender) {
@@ -24,9 +24,11 @@ public class ChangeMaker {
 			System.out.println("\n$" + tender + " exactly covers the price of this item.\n\nNO CHANGE.");
 			break;
 		}
-
-		int change100 = (int) ((tender - price) * 100);
-		System.out.println("\nChange required is " + (tender-price) + ":");
+		
+		int change100 = (int) (((tender - price) * 100) + 0.5);
+		int tempChangeRequired100 = (int)(((tender - price + 0.005) * 100));
+		double changeRequired = (double)tempChangeRequired100/100;
+		System.out.println("\nChange required is " + (changeRequired) + ":");
 
 		while (price < tender && (change100 != 0)) {
 
