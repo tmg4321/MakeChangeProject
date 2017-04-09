@@ -24,7 +24,7 @@ public class ChangeMaker {
 			}
 
 			while (price == tender) {
-				System.out.println("\n$" + tender + " exactly covers the price of this item.");
+				System.out.println("\n$" + tender + " exactly covers the purchase price.");
 				break;
 			}
 
